@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Zaffre Soil Almanac</title>
+  <meta name="description" content="Get in touch with the Zaffre Soil Almanac editorial team. Story ideas, corrections, partnerships, or just to say hello.">
+  <link rel="canonical" href="https://zaffresoilalmanac.example/contact.html">
+  <meta property="og:title" content="Contact · Zaffre Soil Almanac">
+  <meta property="og:description" content="Reach the editors of Zaffre Soil Almanac — we read everything.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zaffresoilalmanac.example/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES (consistent with main site) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #faf8f2;
+      --paper: #ffffff;
+      --ink: #1f2a1f;
+      --ink-soft: #2e3b2e;
+      --muted: #576b57;
+      --border: #d9d4c7;
+      --accent-zaffre: #1f3b4c;
+      --accent-leaf: #3a6b4a;
+      --accent-earth: #9b7b5c;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.9rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+
+    a {
+      color: var(--accent-zaffre);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover { color: var(--accent-leaf); }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER (exact same as main) ---------- */
+    .blog-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .logo span {
+      color: var(--accent-zaffre);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--ink-soft);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: var(--accent-leaf);
+      color: var(--ink);
+    }
+
+    /* ---------- CONTACT PAGE LAYOUT ---------- */
+    .contact-main {
+      margin: 3rem 0 4rem;
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 2.5rem;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2.8rem 3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-intro h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+    }
+
+    .contact-intro .subhead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--accent-earth);
+      padding-left: 1.2rem;
+    }
+
+    .contact-details {
+      margin: 2.5rem 0;
+    }
+
+    .contact-details p {
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-details i {
+      font-style: normal;
+      font-weight: 600;
+      min-width: 80px;
+      color: var(--accent-zaffre);
+    }
+
+    .contact-details a {
+      border-bottom: 1px dotted var(--border);
+    }
+
+    .response-note {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      border: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    .response-note strong {
+      color: var(--accent-leaf);
+    }
+
+    /* ---------- FORM ---------- */
+    .contact-form {
+      background: var(--cream);
+      border-radius: 24px;
+      padding: 2rem 2rem 2.2rem;
+      border: 1px solid var(--border);
+    }
+
+    .contact-form h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+    }
+
+    .contact-form p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-zaffre);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      font-family: var(--font-sans);
+      font-size: 0.98rem;
+      background: var(--paper);
+      transition: border 0.15s, box-shadow 0.15s;
+      color: var(--ink);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent-leaf);
+      box-shadow: 0 0 0 3px rgba(58, 107, 74, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23576b57' d='M6 8L0 0h12z'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 12px;
+    }
+
+    .submit-btn {
+      background: var(--accent-zaffre);
+      border: none;
+      border-radius: 40px;
+      padding: 0.9rem 2.2rem;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      width: 100%;
+      margin-top: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .submit-btn:hover {
+      background: var(--accent-leaf);
+    }
+
+    .submit-btn:active {
+      transform: scale(0.98);
+    }
+
+    .form-footnote {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* ---------- ALTERNATE CONTACT CHANNELS ---------- */
+    .contact-channels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .channel-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .channel-card:hover {
+      border-color: var(--accent-leaf);
+    }
+
+    .channel-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .channel-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .channel-card a {
+      font-weight: 500;
+    }
+
+    /* ---------- FAQ IN CONTACT (short) ---------- */
+    .contact-faq {
+      margin: 3rem 0 1rem;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+    }
+
+    .contact-faq h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-faq .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .contact-faq .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .contact-faq .faq-q {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      color: var(--ink);
+    }
+    .contact-faq .faq-a {
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    /* ---------- FOOTER (consistent) ---------- */
+    .blog-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a {
+      color: var(--ink-soft);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .contact-main {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+      }
+      h1 { font-size: 2rem; }
+      .contact-intro h1 { font-size: 1.9rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .contact-main { padding: 1.8rem 1.2rem; }
+      .contact-details p { flex-direction: column; gap: 0.2rem; }
+      .contact-details i { min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (identical to main) -->
+  <header class="blog-header">
+    <div class="container header-inner">
+      <div class="logo">Zaffre <span>Soil</span> Almanac</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- MAIN CONTACT CARD: info + form -->
+    <div class="contact-main">
+      <!-- LEFT: Intro and details -->
+      <div class="contact-intro">
+        <h1>Let's talk soil, seeds, and stories</h1>
+        <p class="subhead">We’re a small editorial team of working gardeners. Whether you have a correction, a pitch, or a question about your own growing space — we read every message.</p>
+
+        <div class="contact-details">
+          <p><i>Email</i> <a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a></p>
+          <p><i>Pitches</i> <a href="mailto:editors@zaffresoilalmanac.example">editors@zaffresoilalmanac.example</a></p>
+          <p><i>Mail</i> Zaffre Soil Almanac · PO Box 421 · Cedar Grove, OR 97016</p>
+        </div>
+
+        <div class="response-note">
+          <strong>⏳ Typical response time:</strong> 2–3 business days. We’re often out in the garden, but we always reply.
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact form -->
+      <div class="contact-form">
+        <h2>Send a note</h2>
+        <p>Fill in the form and we’ll get back to you. No spam, ever.</p>
+        <form id="contactForm" action="#" method="post">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Elena Marsh" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General question</option>
+              <option value="pitch">Story pitch / article idea</option>
+              <option value="correction">Correction or update</option>
+              <option value="partnership">Partnership / advertising</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what’s on your mind…" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send message →</button>
+          <div class="form-footnote">We usually reply within two days. Your details are never shared.</div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ALTERNATE CHANNELS -->
+    <div class="contact-channels">
+      <div class="channel-card">
+        <h4>📬 Newsletter</h4>
+        <p>Subscribe to <a href="#">The Dirt</a> — our monthly digest of seasonal tips and new articles.</p>
+      </div>
+      <div class="channel-card">
+        <h4>✍️ Pitch guidelines</h4>
+        <p>Read our <a href="#">editorial policy</a> before sending a story idea. We love practical, science-backed pieces.</p>
+      </div>
+      <div class="channel-card">
+        <h4>💬 Social</h4>
+        <p>We’re mostly off social, but you can find occasional updates on <a href="#">Mastodon</a> and <a href="#">Threads</a>.</p>
+      </div>
+    </div>
+
+    <!-- SHORT FAQ SPECIFIC TO CONTACT -->
+    <div class="contact-faq">
+      <h3>Before you write…</h3>
+      <div class="faq-item">
+        <div class="faq-q">Do you accept guest posts?</div>
+        <div class="faq-a">We occasionally publish guest articles from experienced growers. Send a short pitch (2–3 paragraphs) to editors@zaffresoilalmanac.example. We do not accept sponsored posts.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I republish an article?</div>
+        <div class="faq-a">Please email us first. We sometimes allow republishing with credit and a link back — but we need to approve it in writing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where do you get your gardening advice?</div>
+        <div class="faq-a">Our writers are market gardeners, soil scientists, and longtime home growers. We blend field experience with peer-reviewed research whenever possible.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I’d like to send a physical letter or sample.</div>
+        <div class="faq-a">We love mail! Use the PO Box above. For seed or soil samples, please contact us first to arrange details.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER (identical to main) -->
+  <footer class="blog-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Zaffre Soil Almanac</h5>
+          <p style="font-size:0.9rem; color: var(--muted);">Independent gardening journalism since 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#">Soil</a></li>
+            <li><a href="#">Planting</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Small Spaces</a></li>
+            <li><a href="#">Seasonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>About</h5>
+          <ul>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookie policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a></li>
+            <li><a href="#">Submit a story</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Zaffre Soil Almanac. All rights reserved.</span>
+        <span>Made for gardeners, by gardeners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple validation / demo script (prevent actual submission) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          // Visual feedback: simulate success
+          const btn = form.querySelector('.submit-btn');
+          const originalText = btn.textContent;
+          btn.textContent = '✓ Message sent (demo)';
+          btn.style.background = 'var(--accent-leaf)';
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+            form.reset();
+          }, 2500);
+        });
+      }
+
+      // Optional: FAQ toggle if you had clickable questions, but we keep them static for contact.
+      // (No interactive toggles needed, but we keep the structure clean.)
+    });
+  </script>
+</body>
+</html>

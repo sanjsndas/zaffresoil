@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Zaffre Soil Almanac</title>
+  <meta name="description" content="Zaffre Soil Almanac is an independent, reader-supported gardening journal. Learn about our mission, editorial values, and the working gardeners behind the words.">
+  <link rel="canonical" href="https://zaffresoilalmanac.example/about.html">
+  <meta property="og:title" content="About · Zaffre Soil Almanac">
+  <meta property="og:description" content="Independent gardening journalism — who we are, why we write, and how we work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zaffresoilalmanac.example/about.html">
+  <meta property="og:image" content="https://zaffresoilalmanac.example/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #faf8f2;
+      --paper: #ffffff;
+      --ink: #1f2a1f;
+      --ink-soft: #2e3b2e;
+      --muted: #576b57;
+      --border: #d9d4c7;
+      --accent-zaffre: #1f3b4c;
+      --accent-leaf: #3a6b4a;
+      --accent-earth: #9b7b5c;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 740px;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.9rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+
+    a {
+      color: var(--accent-zaffre);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover { color: var(--accent-leaf); }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER ---------- */
+    .blog-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .logo span {
+      color: var(--accent-zaffre);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .nav-links a {
+      color: var(--ink-soft);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: var(--accent-leaf);
+      color: var(--ink);
+    }
+    .nav-links a.active {
+      border-bottom-color: var(--accent-zaffre);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- SEARCH & FILTER BAR (simplified for about) ---------- */
+    .search-section {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+      flex: 2;
+      min-width: 240px;
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      font-size: 0.95rem;
+      padding: 0.6rem 0;
+      width: 100%;
+      outline: none;
+      font-family: var(--font-sans);
+      color: var(--ink);
+    }
+
+    .search-box button {
+      background: var(--accent-zaffre);
+      border: none;
+      border-radius: 30px;
+      padding: 0.55rem 1.3rem;
+      color: white;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .search-box button:hover {
+      background: var(--accent-leaf);
+    }
+
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover {
+      background: #eae6dc;
+      color: var(--ink);
+    }
+    .filter-btn.active {
+      background: var(--accent-zaffre);
+      border-color: var(--accent-zaffre);
+      color: white;
+    }
+
+    /* ---------- ABOUT HERO ---------- */
+    .about-hero {
+      margin: 2.5rem 0 2rem;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      padding: 3rem 3rem 3rem 3rem;
+    }
+
+    .about-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .about-hero .subhead {
+      font-size: 1.25rem;
+      color: var(--ink-soft);
+      max-width: 720px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    /* ---------- CONTENT BLOCKS ---------- */
+    .content-block {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem 3rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .content-block h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+
+    .content-block h3 {
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .content-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-block ul, .content-block ol {
+      margin: 0 0 1.5rem 1.8rem;
+    }
+
+    .content-block li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box {
+      background: var(--cream);
+      border-left: 4px solid var(--accent-leaf);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      margin: 1.8rem 0;
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+    }
+
+    /* ---------- TEAM GRID ---------- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 0.5rem;
+    }
+
+    .team-member {
+      text-align: center;
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 1.8rem 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .team-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: var(--accent-earth);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: white;
+      margin: 0 auto 1rem auto;
+    }
+
+    .team-member h4 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .team-member .role {
+      font-size: 0.85rem;
+      color: var(--accent-earth);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.6rem;
+    }
+
+    .team-member p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* ---------- VALUES / EDITORIAL POLICY ---------- */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.8rem;
+      margin: 1.5rem 0;
+    }
+
+    .value-item {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 1.6rem;
+      border: 1px solid var(--border);
+    }
+
+    .value-item h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-zaffre);
+    }
+
+    .value-item p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      margin-bottom: 0;
+    }
+
+    /* ---------- FAQ (same as homepage) ---------- */
+    .faq-section {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin: 3rem 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+    .faq-answer {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .blog-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a {
+      color: var(--ink-soft);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .about-hero { padding: 2rem 1.8rem; }
+      .about-hero h1 { font-size: 2.2rem; }
+      .content-block { padding: 2rem 1.8rem; }
+      h1 { font-size: 2.2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .search-row { flex-direction: column; align-items: stretch; }
+      .about-hero h1 { font-size: 1.9rem; }
+      .content-block h2 { font-size: 1.6rem; }
+      .team-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (same structure, with active state on About) -->
+  <header class="blog-header">
+    <div class="container header-inner">
+      <div class="logo">Zaffre <span>Soil</span> Almanac</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEARCH & FILTER BAR (simplified, kept for consistency) -->
+  <section class="search-section">
+    <div class="container search-row">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search articles, guides, or topics…" aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="soil">Soil</button>
+        <button class="filter-btn" data-category="planting">Planting</button>
+        <button class="filter-btn" data-category="tools">Tools</button>
+        <button class="filter-btn" data-category="small-spaces">Small Spaces</button>
+        <button class="filter-btn" data-category="seasonal">Seasonal</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+      <h1>We’re gardeners who write —<br>not writers who garden.</h1>
+      <p class="subhead">Zaffre Soil Almanac is an independent, reader‑supported journal. No ads, no sponsored fluff. Just practical, field‑tested knowledge for people who grow things.</p>
+    </section>
+
+    <!-- MISSION / STORY -->
+    <section class="content-block">
+      <h2>Our story</h2>
+      <p>Zaffre Soil Almanac started in 2021 as a shared notebook between four friends who kept answering the same gardening questions over and over. “How do I fix my clay soil?” “Why are my tomatoes splitting?” “When should I prune?” We realised that most gardening advice online was either too vague, too commercial, or just plain wrong.</p>
+      <p>So we began writing the kind of articles we wished we could find: rooted in soil science, tested in real gardens, and written in plain language. We’re not a big media company. We’re a small team of market gardeners, horticulturists, and one stubborn soil nerd who reads academic papers for fun. Every article is written by someone who has actually done the work.</p>
+      <div class="highlight-box">
+        <p>“The best gardening advice is local. We try to give you principles, not just recipes.” — Marcus, Editor</p>
+      </div>
+      <p>Today, over 8,000 gardeners read our weekly almanac. We remain fully independent, supported entirely by readers like you. That means we can write honestly about what works — and what doesn’t.</p>
+    </section>
+
+    <!-- TEAM -->
+    <section class="content-block">
+      <h2>The people behind the pages</h2>
+      <p>We’re a small, distributed team. You’ll see our names on bylines, but here’s a little more about who we are.</p>
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-avatar">EM</div>
+          <h4>Elena Marsh</h4>
+          <div class="role">Soil & Regeneration</div>
+          <p>Soil scientist and market gardener in the Pacific Northwest. Elena writes about aggregates, no‑till, and compost.</p>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar">MC</div>
+          <h4>Marcus Chen</h4>
+          <div class="role">Editor & Tools</div>
+          <p>Former landscaper, now editor. Marcus tests pruners, hoes, and every gadget so you don’t have to waste money.</p>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar">PR</div>
+          <h4>Priya Raman</h4>
+          <div class="role">Small Spaces</div>
+          <p>Grows year‑round on a 6th‑floor balcony in Chicago. Priya writes about container varieties and vertical growing.</p>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar">JO</div>
+          <h4>James Okafor</h4>
+          <div class="role">Seasonal & Planting</div>
+          <p>Fourth‑generation farmer and seed saver. James handles our month‑by‑month planting guides and variety trials.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL VALUES -->
+    <section class="content-block">
+      <h2>How we work</h2>
+      <p>We don’t take advertising, sponsored posts, or free products in exchange for reviews. Our only allegiance is to our readers — and to the soil.</p>
+      <div class="values-grid">
+        <div class="value-item">
+          <h4>Field‑tested</h4>
+          <p>Every technique we recommend has been used in our own gardens or on the farms we work with. No armchair gardening.</p>
+        </div>
+        <div class="value-item">
+          <h4>Science‑informed</h4>
+          <p>We read the research, talk to extension agents, and update articles when new evidence emerges. We cite our sources where it matters.</p>
+        </div>
+        <div class="value-item">
+          <h4>Reader‑supported</h4>
+          <p>No ads, no sponsored content. Our newsletter and optional donations keep the lights on. That’s it.</p>
+        </div>
+        <div class="value-item">
+          <h4>Honest about failure</h4>
+          <p>We share what didn’t work, too. Gardening is full of variables, and pretending otherwise doesn’t help anyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSPARENCY / CONTACT -->
+    <section class="content-block">
+      <h2>Transparency & contact</h2>
+      <p>We’re a small operation, and we like hearing from readers. If you spot an error, have a question, or want to suggest a topic, email us at <a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a>. We read everything, though we can’t always reply individually.</p>
+      <p>For more about our privacy practices, see our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookie Policy</a>. Our <a href="terms.html">Terms of Use</a> and <a href="disclaimer.html">Disclaimer</a> are also available.</p>
+    </section>
+
+    <!-- FAQ SECTION (same as homepage, but slightly adapted for about) -->
+    <section class="faq-section">
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">Are you affiliated with any gardening brands?</div>
+        <div class="faq-answer">No. We don’t have affiliate links, sponsorships, or brand partnerships. If we mention a tool or product, it’s because we use it and find it useful — never because we’re paid to.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How can I support the Almanac?</div>
+        <div class="faq-answer">The best way is to subscribe to our newsletter and share articles with fellow gardeners. We also accept optional donations via our support page. Every contribution goes directly to paying writers and keeping the site ad‑free.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I republish your articles?</div>
+        <div class="faq-answer">We’re happy for you to quote short excerpts with a link back to the original. For full republishing, please email us first — we usually say yes for non‑profits and educational use.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you accept guest posts?</div>
+        <div class="faq-answer">Occasionally, if the writer has hands‑on experience and a clear voice. Pitch us at hello@zaffresoilalmanac.example with a short outline and a link to your work.</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER (same as homepage) -->
+  <footer class="blog-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Zaffre Soil Almanac</h5>
+          <p style="font-size:0.9rem; color: var(--muted);">Independent gardening journalism since 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#">Soil</a></li>
+            <li><a href="#">Planting</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Small Spaces</a></li>
+            <li><a href="#">Seasonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>About</h5>
+          <ul>
+            <li><a href="about.html">Our team</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookie policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a></li>
+            <li><a href="#">Submit a story</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Zaffre Soil Almanac. All rights reserved.</span>
+        <span>Made for gardeners, by gardeners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCHEMA MARKUP for About page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Zaffre Soil Almanac",
+    "url": "https://zaffresoilalmanac.example/about.html",
+    "description": "Zaffre Soil Almanac is an independent, reader-supported gardening journal. Learn about our mission, editorial values, and the working gardeners behind the words.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zaffre Soil Almanac",
+      "url": "https://zaffresoilalmanac.example",
+      "email": "hello@zaffresoilalmanac.example",
+      "foundingDate": "2021",
+      "description": "Independent gardening journal with practical, in-depth articles on soil, planting, tools, and small-space growing."
+    }
+  }
+  </script>
+
+  <!-- Minimal JavaScript for FAQ toggle (same as homepage) -->
+  <script>
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        if (answer.style.display === 'none') {
+          answer.style.display = 'block';
+        } else {
+          answer.style.display = 'none';
+        }
+      });
+    });
+
+    // Search bar is non-functional on about page (no article grid), but we can keep a placeholder
+    // or optionally redirect to home. For simplicity, we just log.
+    document.getElementById('searchButton')?.addEventListener('click', function() {
+      const query = document.getElementById('searchInput')?.value;
+      if (query) {
+        // In a real site, you'd redirect to search results, but here we just alert.
+        alert('Search is available on the home page. Redirecting you there with your query…');
+        window.location.href = 'index.html?search=' + encodeURIComponent(query);
+      }
+    });
+    document.getElementById('searchInput')?.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        document.getElementById('searchButton')?.click();
+      }
+    });
+
+    // Filter buttons on about page: they don't filter anything here, so we could hide them or redirect.
+    // For consistency, we'll make them redirect to home with category filter.
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const category = this.dataset.category;
+        if (category && category !== 'all') {
+          window.location.href = 'index.html?category=' + encodeURIComponent(category);
+        } else {
+          window.location.href = 'index.html';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

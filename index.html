@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaffre Soil Almanac · Independent gardening journal & practical growing guides</title>
+  <meta name="description" content="Zaffre Soil Almanac is a reader‑supported gardening journal. In‑depth guides on soil, seasonal planting, tool care, and small‑space growing — written by working gardeners.">
+  <link rel="canonical" href="https://zaffresoilalmanac.example/index.html">
+  <meta property="og:title" content="Zaffre Soil Almanac · Independent gardening journal">
+  <meta property="og:description" content="Practical, in‑depth gardening articles — from soil science to balcony harvests.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zaffresoilalmanac.example">
+  <meta property="og:image" content="https://zaffresoilalmanac.example/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #faf8f2;
+      --paper: #ffffff;
+      --ink: #1f2a1f;
+      --ink-soft: #2e3b2e;
+      --muted: #576b57;
+      --border: #d9d4c7;
+      --accent-zaffre: #1f3b4c;   /* deep zaffre blue-green */
+      --accent-leaf: #3a6b4a;
+      --accent-earth: #9b7b5c;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 740px;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.9rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+
+    a {
+      color: var(--accent-zaffre);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover { color: var(--accent-leaf); }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER ---------- */
+    .blog-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .logo span {
+      color: var(--accent-zaffre);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .nav-links a {
+      color: var(--ink-soft);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: var(--accent-leaf);
+      color: var(--ink);
+    }
+
+    /* ---------- SEARCH & FILTER BAR ---------- */
+    .search-section {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+      flex: 2;
+      min-width: 240px;
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      font-size: 0.95rem;
+      padding: 0.6rem 0;
+      width: 100%;
+      outline: none;
+      font-family: var(--font-sans);
+      color: var(--ink);
+    }
+
+    .search-box button {
+      background: var(--accent-zaffre);
+      border: none;
+      border-radius: 30px;
+      padding: 0.55rem 1.3rem;
+      color: white;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .search-box button:hover {
+      background: var(--accent-leaf);
+    }
+
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover {
+      background: #eae6dc;
+      color: var(--ink);
+    }
+    .filter-btn.active {
+      background: var(--accent-zaffre);
+      border-color: var(--accent-zaffre);
+      color: white;
+    }
+
+    /* ---------- FEATURED ARTICLE ---------- */
+    .featured {
+      margin: 2.5rem 0 2rem;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+    }
+
+    .featured-content {
+      padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .featured-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-earth);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .featured h2 {
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .featured-excerpt {
+      color: var(--ink-soft);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .featured-img {
+      background: #dfdcd2;
+      min-height: 260px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><path fill="%233a6b4a" opacity="0.2" d="M0 200 Q100 100 200 200 T400 200 L400 400 L0 400 Z"/><circle fill="%239b7b5c" opacity="0.3" cx="300" cy="120" r="60"/></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ---------- ARTICLE GRID ---------- */
+    .articles-section {
+      margin: 2.5rem 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .article-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.6rem 1.6rem 1.8rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card:hover {
+      border-color: var(--accent-leaf);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    .card-category {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-earth);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .article-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .article-card h3 a {
+      color: var(--ink);
+    }
+
+    .article-card h3 a:hover {
+      color: var(--accent-zaffre);
+    }
+
+    .card-excerpt {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      flex: 1;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      margin-top: auto;
+    }
+
+    /* ---------- MAIN LAYOUT WITH SIDEBAR ---------- */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      margin: 2rem 0 3rem;
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .sidebar-widget {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.8rem;
+    }
+
+    .sidebar-widget h4 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .popular-list {
+      list-style: none;
+    }
+
+    .popular-list li {
+      margin-bottom: 1.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .popular-list li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .popular-list a {
+      font-weight: 500;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .popular-list span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .newsletter-mini {
+      background: var(--accent-zaffre);
+      color: white;
+      border: none;
+    }
+    .newsletter-mini h4 {
+      color: white;
+      border-bottom-color: rgba(255,255,255,0.2);
+    }
+    .newsletter-mini p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+    }
+    .newsletter-mini input {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border-radius: 30px;
+      border: none;
+      margin: 0.8rem 0;
+      font-family: var(--font-sans);
+    }
+    .newsletter-mini button {
+      background: white;
+      color: var(--accent-zaffre);
+      border: none;
+      border-radius: 30px;
+      padding: 0.7rem 1rem;
+      font-weight: 600;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .newsletter-mini button:hover {
+      background: #eae6dc;
+    }
+
+    /* ---------- ARTICLE READING LAYOUT (full article) ---------- */
+    .article-full {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.8rem 3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .article-full h1 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.2rem;
+    }
+
+    .article-full p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-full h2 {
+      margin: 2rem 0 1rem;
+      font-size: 1.7rem;
+    }
+
+    .article-full h3 {
+      margin: 1.8rem 0 0.8rem;
+    }
+
+    .article-full ul, .article-full ol {
+      margin: 0 0 1.5rem 1.8rem;
+    }
+
+    .article-full li {
+      margin-bottom: 0.5rem;
+    }
+
+    .author-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.8rem;
+      margin: 2.5rem 0 1rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .author-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: var(--accent-earth);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .related-articles {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+
+    .related-articles h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .related-item a {
+      font-weight: 500;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-section {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin: 3rem 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+    .faq-answer {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .blog-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a {
+      color: var(--ink-soft);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .featured-grid { grid-template-columns: 1fr; }
+      .featured-img { min-height: 200px; order: -1; }
+      .main-layout { grid-template-columns: 1fr; }
+      .article-full { padding: 2rem 1.5rem; }
+      h1 { font-size: 2.2rem; }
+      .featured h2 { font-size: 1.8rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .search-row { flex-direction: column; align-items: stretch; }
+      .article-grid { grid-template-columns: 1fr; }
+      .author-box { flex-direction: column; text-align: center; }
+      .featured-content { padding: 1.8rem; }
+      .article-full h1 { font-size: 1.8rem; }
+    }
+
+    /* hidden class for filtering */
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="blog-header">
+    <div class="container header-inner">
+      <div class="logo">Zaffre <span>Soil</span> Almanac</div>
+      <nav class="nav-links" aria-label="Main navigation">
+      <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEARCH & FILTER -->
+  <section class="search-section">
+    <div class="container search-row">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search articles, guides, or topics…" aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="soil">Soil</button>
+        <button class="filter-btn" data-category="planting">Planting</button>
+        <button class="filter-btn" data-category="tools">Tools</button>
+        <button class="filter-btn" data-category="small-spaces">Small Spaces</button>
+        <button class="filter-btn" data-category="seasonal">Seasonal</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- FEATURED ARTICLE -->
+    <section class="featured">
+      <div class="featured-grid">
+        <div class="featured-content">
+          <div class="featured-label">Featured · Soil</div>
+          <h2><a href="#" style="color:var(--ink);">The Living Matrix: Understanding Soil Aggregates and Why They Matter</a></h2>
+          <p class="featured-excerpt">Soil isn't just dirt — it's a structured, breathing ecosystem. We break down how aggregates form, how to protect them, and why tillage is rarely the answer.</p>
+          <div class="meta">
+            <span>April 12, 2025</span>
+            <span>12 min read</span>
+          </div>
+        </div>
+        <div class="featured-img" role="img" aria-label="Abstract illustration of soil layers and roots"></div>
+      </div>
+    </section>
+
+    <!-- MAIN LAYOUT: ARTICLES + SIDEBAR -->
+    <div class="main-layout">
+      <!-- LEFT: ARTICLE GRID -->
+      <main>
+        <section class="articles-section" id="articlesSection">
+          <div class="section-header">
+            <h2>Latest from the almanac</h2>
+          </div>
+          <div class="article-grid" id="articleGrid">
+            <!-- Article cards will be injected via JS, but also include static for no-JS? We'll render via JS for filtering. -->
+          </div>
+        </section>
+
+        <!-- FULL ARTICLE READING LAYOUT (example: one article displayed) -->
+        <section class="article-full" id="fullArticle" style="margin-top: 3rem;">
+          <h1>The Living Matrix: Understanding Soil Aggregates and Why They Matter</h1>
+          <div class="article-meta">
+            <span>By <strong>Elena Marsh</strong></span>
+            <span>April 12, 2025</span>
+            <span>Soil · 12 min read</span>
+          </div>
+          <p>When you sink your hands into a healthy garden bed, you're not just touching dirt. You're touching a complex, living architecture — crumbs and clumps of minerals, organic matter, fungi, and bacteria bound together by glomalin and root exudates. These are soil aggregates, and they are the foundation of everything we grow.</p>
+          <h2>What exactly is an aggregate?</h2>
+          <p>An aggregate is a cluster of soil particles that stick together more strongly than they stick to neighbouring clusters. Think of it like a tiny city: sand, silt, and clay form the buildings; organic matter is the mortar; fungal hyphae are the highways; and bacteria are the residents. When these cities are intact, water infiltrates, air circulates, and roots can explore.</p>
+          <h2>Why tillage destroys the metropolis</h2>
+          <p>Every time you rototill or dig over a bed, you're effectively bulldozing those cities. The immediate effect is a flush of available nutrients — a feeding frenzy for microbes — but the long-term cost is compaction, erosion, and loss of organic carbon. No-till and low-till gardening aren't trends; they're a return to how soil builds itself.</p>
+          <h3>Three ways to protect aggregates</h3>
+          <ul>
+            <li><strong>Keep living roots in the ground</strong> as long as possible. Root exudates feed the fungi that glue aggregates together.</li>
+            <li><strong>Add organic matter as mulch</strong>, not as a dug-in amendment. Let worms and microbes incorporate it.</li>
+            <li><strong>Avoid walking on beds</strong>, especially when wet. Compaction is the enemy of pore space.</li>
+          </ul>
+          <p>Building aggregate stability takes seasons, not weeks. But the payoff — drought resilience, fewer pests, and healthier plants — is worth every bit of patience.</p>
+
+          <!-- Author box -->
+          <div class="author-box">
+            <div class="author-avatar">EM</div>
+            <div>
+              <h4 style="margin-bottom:0.2rem;">Elena Marsh</h4>
+              <p style="margin-bottom:0; font-size:0.9rem; color:var(--muted);">Elena is a soil scientist and market gardener in the Pacific Northwest. She writes about regenerative growing for small-scale farms and home gardens.</p>
+            </div>
+          </div>
+
+          <!-- Related articles -->
+          <div class="related-articles">
+            <h3>Related reading</h3>
+            <div class="related-grid">
+              <div class="related-item"><a href="#">The No‑Till Balcony: Growing in 12 Inches of Soil</a><span style="font-size:0.8rem; color:var(--muted);">Small Spaces</span></div>
+              <div class="related-item"><a href="#">Reading Your Weeds: What They Tell You About Soil</a><span style="font-size:0.8rem; color:var(--muted);">Soil</span></div>
+              <div class="related-item"><a href="#">Compost Tea: Hype vs. Science</a><span style="font-size:0.8rem; color:var(--muted);">Soil</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+          <h2>Frequently asked questions</h2>
+          <div class="faq-item">
+            <div class="faq-question">How often should I water my vegetable garden?</div>
+            <div class="faq-answer">Water deeply once or twice a week rather than lightly every day. The goal is to encourage deep roots. Stick your finger into the soil — if it's dry 2 inches down, it's time to water.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What's the best way to start seeds indoors?</div>
+            <div class="faq-answer">Use a sterile seed-starting mix, keep the soil consistently moist (not soggy), and provide 12–16 hours of bright light. A heat mat helps germination for warm-season crops like tomatoes and peppers.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Do I need to sterilize my pruning shears between plants?</div>
+            <div class="faq-answer">Yes — especially if you're working with diseased plants. Wipe blades with rubbing alcohol or a 10% bleach solution between cuts to avoid spreading pathogens.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can I grow blueberries in containers?</div>
+            <div class="faq-answer">Absolutely. Use a large container (15–20 gallons) and an acidic mix (peat moss + pine bark + perlite). Keep them well-watered and feed with a fertilizer for acid-loving plants.</div>
+          </div>
+        </section>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h4>Popular this month</h4>
+          <ul class="popular-list">
+            <li><a href="#">The Living Matrix: Understanding Soil Aggregates</a><span>12 min read</span></li>
+            <li><a href="#">A No‑Nonsense Guide to Sharpening Bypass Pruners</a><span>8 min read</span></li>
+            <li><a href="#">Balcony Tomatoes: Varieties That Actually Produce</a><span>10 min read</span></li>
+            <li><a href="#">Fall Garlic: Planting for Next Summer's Harvest</a><span>7 min read</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget newsletter-mini">
+          <h4>The Dirt</h4>
+          <p>Monthly digest of what to plant, prune, and prepare — no spam, just useful.</p>
+          <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+          <button>Subscribe</button>
+        </div>
+        <div class="sidebar-widget">
+          <h4>Editor's pick</h4>
+          <p style="font-size:0.95rem;">“The best gardening advice is local. We try to give you principles, not just recipes.”</p>
+          <p style="font-size:0.85rem; color:var(--muted); margin-bottom:0;">— Marcus, Editor</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- NEWSLETTER SECTION (full width) -->
+    <section style="background: var(--paper); border: 1px solid var(--border); border-radius: 24px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
+      <h2 style="font-size: 1.8rem;">Grow with us</h2>
+      <p style="max-width: 520px; margin: 0.5rem auto 1.5rem; color: var(--ink-soft);">Join 8,000+ gardeners who get our weekly almanac — practical tips, seasonal reminders, and no fluff.</p>
+      <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;">
+        <input type="email" placeholder="you@example.com" style="padding: 0.8rem 1.2rem; border-radius: 40px; border: 1px solid var(--border); width: 260px; font-family: var(--font-sans);">
+        <button style="background: var(--accent-zaffre); border: none; border-radius: 40px; padding: 0.8rem 2rem; color: white; font-weight: 500; cursor: pointer;">Sign up</button>
+      </div>
+      <p style="font-size:0.8rem; color: var(--muted); margin-top: 1rem;">We never share your email. Unsubscribe anytime.</p>
+    </section>
+
+    <!-- ABOUT, CONTACT, PRIVACY, TERMS, COOKIE CONTENT -->
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin: 3rem 0; background: var(--paper); border-radius: 24px; padding: 2.5rem; border: 1px solid var(--border);">
+      <div>
+        <h3>About</h3>
+        <p style="font-size:0.9rem; color: var(--muted);">Zaffre Soil Almanac is an independent, reader‑supported journal for gardeners who want to dig deeper. We publish practical, science‑informed articles three times a week.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p style="font-size:0.9rem; color: var(--muted);">Questions, corrections, or story ideas? Write to us at <a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a>. We read everything.</p>
+      </div>
+      <div>
+        <h3>Privacy</h3>
+        <p style="font-size:0.9rem; color: var(--muted);">We collect only the data needed to deliver our newsletter. We never sell or share your information. Read our full privacy policy.</p>
+      </div>
+      <div>
+        <h3>Terms & Cookies</h3>
+        <p style="font-size:0.9rem; color: var(--muted);">By using this site you agree to our terms of use. We use a single functional cookie to remember your preferences — no tracking pixels.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="blog-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Zaffre Soil Almanac</h5>
+          <p style="font-size:0.9rem; color: var(--muted);">Independent gardening journalism since 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#">Soil</a></li>
+            <li><a href="#">Planting</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Small Spaces</a></li>
+            <li><a href="#">Seasonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>About</h5>
+          <ul>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookie policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a></li>
+            <li><a href="#">Submit a story</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Zaffre Soil Almanac. All rights reserved.</span>
+        <span>Made for gardeners, by gardeners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCHEMA MARKUP -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Zaffre Soil Almanac",
+    "url": "https://zaffresoilalmanac.example",
+    "description": "Independent gardening journal with practical, in-depth articles on soil, planting, tools, and small-space growing.",
+    "author": {
+      "@type": "Organization",
+      "name": "Zaffre Soil Almanac"
+    }
+  }
+  </script>
+
+  <!-- JAVASCRIPT for filtering and rendering articles -->
+  <script>
+    // Original article data
+    const articles = [
+      {
+        title: "The Living Matrix: Understanding Soil Aggregates and Why They Matter",
+        excerpt: "Soil isn't just dirt — it's a structured, breathing ecosystem. We break down how aggregates form, how to protect them, and why tillage is rarely the answer.",
+        category: "soil",
+        categoryLabel: "Soil",
+        readingTime: "12 min read",
+        date: "April 12, 2025"
+      },
+      {
+        title: "A No‑Nonsense Guide to Sharpening Bypass Pruners",
+        excerpt: "Dull pruners crush stems and invite disease. Here's a 10‑minute routine that keeps your blades slicing cleanly all season.",
+        category: "tools",
+        categoryLabel: "Tools",
+        readingTime: "8 min read",
+        date: "April 8, 2025"
+      },
+      {
+        title: "Balcony Tomatoes: Varieties That Actually Produce",
+        excerpt: "Not all tomatoes thrive in containers. We tested 14 compact varieties to find the best yields for small spaces.",
+        category: "small-spaces",
+        categoryLabel: "Small Spaces",
+        readingTime: "10 min read",
+        date: "April 5, 2025"
+      },
+      {
+        title: "Fall Garlic: Planting for Next Summer's Harvest",
+        excerpt: "October is garlic-planting time in most climates. Choose the right type, prepare the bed, and you'll be rewarded with fat bulbs.",
+        category: "planting",
+        categoryLabel: "Planting",
+        readingTime: "7 min read",
+        date: "April 1, 2025"
+      },
+      {
+        title: "Reading Your Weeds: What They Tell You About Soil",
+        excerpt: "Dandelions, chickweed, and plantain aren't just nuisances — they're indicators of soil conditions. Learn to read the signs.",
+        category: "soil",
+        categoryLabel: "Soil",
+        readingTime: "9 min read",
+        date: "March 28, 2025"
+      },
+      {
+        title: "The No‑Till Balcony: Growing in 12 Inches of Soil",
+        excerpt: "You don't need a farm to build healthy soil. How to create a thriving no‑till container garden on a concrete balcony.",
+        category: "small-spaces",
+        categoryLabel: "Small Spaces",
+        readingTime: "11 min read",
+        date: "March 24, 2025"
+      },
+      {
+        title: "Seed Starting 101: Light, Temperature, and Timing",
+        excerpt: "Leggy seedlings and damping off are preventable. A clear guide to starting vegetables and flowers indoors.",
+        category: "planting",
+        categoryLabel: "Planting",
+        readingTime: "13 min read",
+        date: "March 20, 2025"
+      },
+      {
+        title: "Compost Tea: Hype vs. Science",
+        excerpt: "Brewing compost tea is popular, but does it actually improve soil? We look at the evidence and the practical reality.",
+        category: "soil",
+        categoryLabel: "Soil",
+        readingTime: "10 min read",
+        date: "March 16, 2025"
+      },
+      {
+        title: "Five Tools Every Gardener Actually Needs (And Five You Don't)",
+        excerpt: "Skip the gadget aisle. These five tools will handle 90% of garden tasks — and last for decades.",
+        category: "tools",
+        categoryLabel: "Tools",
+        readingTime: "8 min read",
+        date: "March 12, 2025"
+      },
+      {
+        title: "Seasonal Chores: A Month‑by‑Month Almanac",
+        excerpt: "What to sow, prune, and harvest each month — adaptable to temperate climates. Keep this handy.",
+        category: "seasonal",
+        categoryLabel: "Seasonal",
+        readingTime: "15 min read",
+        date: "March 8, 2025"
+      }
+    ];
+
+    const articleGrid = document.getElementById('articleGrid');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    function renderArticles() {
+      let filtered = articles;
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(a => a.category === currentCategory);
+      }
+      if (currentSearch.trim() !== '') {
+        const q = currentSearch.toLowerCase();
+        filtered = filtered.filter(a => 
+          a.title.toLowerCase().includes(q) || 
+          a.excerpt.toLowerCase().includes(q) || 
+          a.categoryLabel.toLowerCase().includes(q)
+        );
+      }
+
+      if (filtered.length === 0) {
+        articleGrid.innerHTML = `<p style="grid-column:1/-1; color:var(--muted); padding:2rem 0;">No articles match your search. Try a different term or category.</p>`;
+        return;
+      }
+
+      articleGrid.innerHTML = filtered.map(article => `
+        <article class="article-card">
+          <div class="card-category">${article.categoryLabel}</div>
+          <h3><a href="#">${article.title}</a></h3>
+          <p class="card-excerpt">${article.excerpt}</p>
+          <div class="card-meta">
+            <span>${article.date}</span>
+            <span>${article.readingTime}</span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Filter button click
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentCategory = this.dataset.category;
+        renderArticles();
+      });
+    });
+
+    // Search
+    function performSearch() {
+      currentSearch = searchInput.value;
+      renderArticles();
+    }
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+
+    // Initial render
+    renderArticles();
+
+    // FAQ toggle (simple)
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        if (answer.style.display === 'none') {
+          answer.style.display = 'block';
+        } else {
+          answer.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

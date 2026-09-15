@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use & Privacy · Zaffre Soil Almanac</title>
+  <meta name="description" content="Terms of Use and Privacy Policy for Zaffre Soil Almanac: your rights, our responsibilities, and how we handle data and content.">
+  <link rel="canonical" href="https://zaffresoilalmanac.example/terms.html">
+  <meta property="og:title" content="Terms of Use & Privacy · Zaffre Soil Almanac">
+  <meta property="og:description" content="Read our terms of use, privacy practices, and editorial policies in plain language.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zaffresoilalmanac.example/terms.html">
+  <meta property="og:image" content="https://zaffresoilalmanac.example/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES (same as about) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #faf8f2;
+      --paper: #ffffff;
+      --ink: #1f2a1f;
+      --ink-soft: #2e3b2e;
+      --muted: #576b57;
+      --border: #d9d4c7;
+      --accent-zaffre: #1f3b4c;
+      --accent-leaf: #3a6b4a;
+      --accent-earth: #9b7b5c;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 740px;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.9rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+
+    a {
+      color: var(--accent-zaffre);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover { color: var(--accent-leaf); }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER ---------- */
+    .blog-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .logo span {
+      color: var(--accent-zaffre);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .nav-links a {
+      color: var(--ink-soft);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: var(--accent-leaf);
+      color: var(--ink);
+    }
+    .nav-links a.active {
+      border-bottom-color: var(--accent-zaffre);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- SEARCH BAR (simplified) ---------- */
+    .search-section {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+      flex: 2;
+      min-width: 240px;
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      font-size: 0.95rem;
+      padding: 0.6rem 0;
+      width: 100%;
+      outline: none;
+      font-family: var(--font-sans);
+      color: var(--ink);
+    }
+
+    .search-box button {
+      background: var(--accent-zaffre);
+      border: none;
+      border-radius: 30px;
+      padding: 0.55rem 1.3rem;
+      color: white;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .search-box button:hover {
+      background: var(--accent-leaf);
+    }
+
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover {
+      background: #eae6dc;
+      color: var(--ink);
+    }
+    .filter-btn.active {
+      background: var(--accent-zaffre);
+      border-color: var(--accent-zaffre);
+      color: white;
+    }
+
+    /* ---------- TERMS HERO ---------- */
+    .terms-hero {
+      margin: 2.5rem 0 2rem;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      padding: 3rem 3rem 2.5rem 3rem;
+    }
+
+    .terms-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .terms-hero .subhead {
+      font-size: 1.2rem;
+      color: var(--ink-soft);
+      max-width: 750px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    .terms-meta {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+
+    /* ---------- CONTENT BLOCKS ---------- */
+    .content-block {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.5rem 3rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .content-block h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+
+    .content-block h3 {
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .content-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-block ul, .content-block ol {
+      margin: 0 0 1.5rem 1.8rem;
+    }
+
+    .content-block li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box {
+      background: var(--cream);
+      border-left: 4px solid var(--accent-leaf);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      margin: 1.8rem 0;
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+    }
+
+    .legal-note {
+      font-size: 0.95rem;
+      background: #f3f0e8;
+      border-radius: 12px;
+      padding: 1.2rem 1.8rem;
+      color: var(--ink-soft);
+      margin: 1.5rem 0;
+      border-left: 3px solid var(--accent-earth);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .blog-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a {
+      color: var(--ink-soft);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .terms-hero { padding: 2rem 1.8rem; }
+      .terms-hero h1 { font-size: 2.2rem; }
+      .content-block { padding: 2rem 1.8rem; }
+      h1 { font-size: 2.2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .search-row { flex-direction: column; align-items: stretch; }
+      .terms-hero h1 { font-size: 1.9rem; }
+      .content-block h2 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (with active state on Terms) -->
+  <header class="blog-header">
+    <div class="container header-inner">
+      <div class="logo">Zaffre <span>Soil</span> Almanac</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html" class="active">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SEARCH & FILTER BAR (kept for consistency) -->
+  <section class="search-section">
+    <div class="container search-row">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search articles, guides, or topics…" aria-label="Search articles">
+        <button id="searchButton">Search</button>
+      </div>
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="soil">Soil</button>
+        <button class="filter-btn" data-category="planting">Planting</button>
+        <button class="filter-btn" data-category="tools">Tools</button>
+        <button class="filter-btn" data-category="small-spaces">Small Spaces</button>
+        <button class="filter-btn" data-category="seasonal">Seasonal</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- TERMS HERO -->
+    <section class="terms-hero">
+      <h1>Terms of Use & Privacy</h1>
+      <p class="subhead">Plain‑language terms that explain how we publish, how we handle your data, and what you can expect from us.</p>
+      <div class="terms-meta">
+        <strong>Last updated:</strong> 15 March 2025 · This document covers both our Terms of Use and our Privacy Policy. For cookie‑specific details, see our <a href="cookies.html">Cookie Policy</a>.
+      </div>
+    </section>
+
+    <!-- TERMS OF USE -->
+    <section class="content-block" id="terms-of-use">
+      <h2>Terms of Use</h2>
+      <p>Welcome to Zaffre Soil Almanac. By accessing or using our website, you agree to be bound by these Terms of Use. If you do not agree, please do not use the site.</p>
+
+      <h3>1. Who we are</h3>
+      <p>Zaffre Soil Almanac ("we", "us", "our") is an independent, reader‑supported gardening journal. Our website provides articles, guides, and resources related to gardening, soil health, and growing food.</p>
+
+      <h3>2. Use of content</h3>
+      <p>All content on this site — including text, graphics, logos, and images — is owned by or licensed to Zaffre Soil Almanac and is protected by copyright and other intellectual property laws.</p>
+      <ul>
+        <li><strong>Personal use:</strong> You may read, print, and share links to our articles for personal, non‑commercial use.</li>
+        <li><strong>Excerpts:</strong> You may quote short excerpts (up to 100 words) with a clear attribution and a link back to the original article.</li>
+        <li><strong>Republishing:</strong> Full republishing requires prior written permission. We often grant permission for non‑profit and educational use — just <a href="mailto:hello@zaffresoilalmanac.example">email us</a>.</li>
+        <li><strong>Commercial use:</strong> You may not use our content for commercial purposes without explicit permission.</li>
+      </ul>
+
+      <h3>3. User contributions</h3>
+      <p>If you submit comments, guest posts, or other content, you grant us a non‑exclusive, royalty‑free, perpetual license to publish, edit, and distribute that content. You are responsible for ensuring your contributions do not infringe on any third‑party rights.</p>
+
+      <h3>4. Prohibited conduct</h3>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the site for any unlawful purpose.</li>
+        <li>Attempt to gain unauthorised access to our systems or interfere with the site’s operation.</li>
+        <li>Harvest or scrape content for use in competing services or AI training without permission.</li>
+        <li>Misrepresent your identity or affiliation.</li>
+      </ul>
+
+      <h3>5. Disclaimers</h3>
+      <p>Gardening involves variables beyond our control. The information on this site is provided for general informational purposes only and is not a substitute for professional horticultural or legal advice. We make no warranties about the completeness, reliability, or accuracy of this information. Any action you take based on the information on this site is strictly at your own risk.</p>
+      <div class="highlight-box">
+        <p>We test our advice in real gardens, but every climate, soil, and microclimate is different. Use your judgement and adapt our principles to your local conditions.</p>
+      </div>
+
+      <h3>6. Limitation of liability</h3>
+      <p>To the fullest extent permitted by law, Zaffre Soil Almanac and its contributors shall not be liable for any indirect, incidental, or consequential damages arising from your use of the site or reliance on its content.</p>
+
+      <h3>7. Changes to these terms</h3>
+      <p>We may update these Terms of Use from time to time. We will post the revised version on this page with an updated "last revised" date. Your continued use of the site after changes constitutes acceptance of the new terms.</p>
+
+      <h3>8. Governing law</h3>
+      <p>These terms are governed by the laws of the State of Oregon, United States, without regard to its conflict of law provisions.</p>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section class="content-block" id="privacy">
+      <h2>Privacy Policy</h2>
+      <p>We are committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding your data.</p>
+
+      <h3>1. Information we collect</h3>
+      <p>We keep data collection to a minimum. Here’s what we may collect:</p>
+      <ul>
+        <li><strong>Voluntary information:</strong> If you subscribe to our newsletter or contact us, we collect your email address and any information you choose to share.</li>
+        <li><strong>Usage data:</strong> Like most websites, we use server logs and privacy‑respecting analytics to understand how visitors use the site (e.g., pages viewed, time on site). This data is aggregated and does not identify you personally.</li>
+        <li><strong>Cookies:</strong> We use essential cookies to make the site work and optional analytics cookies to improve our content. See our <a href="cookies.html">Cookie Policy</a> for details.</li>
+      </ul>
+
+      <h3>2. How we use your information</h3>
+      <ul>
+        <li>To send you our newsletter if you have opted in (you can unsubscribe at any time).</li>
+        <li>To respond to your inquiries or submissions.</li>
+        <li>To analyse site traffic and improve our articles and user experience.</li>
+        <li>To comply with legal obligations.</li>
+      </ul>
+
+      <h3>3. What we don’t do</h3>
+      <p>We do not sell, rent, or trade your personal information. We do not run third‑party ads or share your data with advertisers. We do not use invasive tracking.</p>
+
+      <h3>4. Data storage and security</h3>
+      <p>We store your data on secure servers and take reasonable measures to protect it. However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
+
+      <h3>5. Third‑party services</h3>
+      <p>We use a privacy‑focused analytics provider that does not track you across sites and anonymises IP addresses. Our newsletter is delivered via a reputable email service provider. These providers only process data on our behalf and are bound by confidentiality agreements.</p>
+
+      <h3>6. Your rights</h3>
+      <p>Depending on your location, you may have rights to access, correct, delete, or restrict the processing of your personal data. To exercise these rights, contact us at <a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a>. We will respond within a reasonable timeframe.</p>
+
+      <h3>7. Children’s privacy</h3>
+      <p>Our site is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
+
+      <h3>8. Changes to this policy</h3>
+      <p>We may update this Privacy Policy occasionally. We will notify you of significant changes by posting a notice on the site or, if you’re a subscriber, by email.</p>
+
+      <div class="legal-note">
+        <strong>Summary for humans:</strong> We collect as little as possible. We don’t sell your data. We use privacy‑friendly analytics. You can unsubscribe or ask us to delete your data anytime.
+      </div>
+    </section>
+
+    <!-- INTEGRATED COOKIES & CONTACT REFERENCE -->
+    <section class="content-block">
+      <h2>Cookies, third parties, and contact</h2>
+      <p>For full details on the cookies we use and how to manage them, please see our <a href="cookies.html">Cookies Policy</a>. Our <a href="disclaimer.html">Disclaimer</a> provides additional context about the limits of our advice.</p>
+      <p>If you have questions about these Terms of Use or our Privacy Policy, or if you want to request a copy of the data we hold about you, please email <a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a>. You can also write to us at: Zaffre Soil Almanac, 2210 SE Garden Way, Portland, OR 97214, USA.</p>
+      <p>This document was last revised on <strong>15 March 2025</strong>.</p>
+    </section>
+  </div>
+
+  <!-- FOOTER (same as about) -->
+  <footer class="blog-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Zaffre Soil Almanac</h5>
+          <p style="font-size:0.9rem; color: var(--muted);">Independent gardening journalism since 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#">Soil</a></li>
+            <li><a href="#">Planting</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Small Spaces</a></li>
+            <li><a href="#">Seasonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>About</h5>
+          <ul>
+            <li><a href="about.html">Our team</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookie policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a></li>
+            <li><a href="#">Submit a story</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Zaffre Soil Almanac. All rights reserved.</span>
+        <span>Made for gardeners, by gardeners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCHEMA MARKUP for TermsPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Use & Privacy · Zaffre Soil Almanac",
+    "url": "https://zaffresoilalmanac.example/terms.html",
+    "description": "Terms of Use and Privacy Policy for Zaffre Soil Almanac: your rights, our responsibilities, and how we handle data and content.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Zaffre Soil Almanac",
+      "url": "https://zaffresoilalmanac.example"
+    },
+    "dateModified": "2025-03-15"
+  }
+  </script>
+
+  <!-- Minimal JavaScript (search + filter redirection, same as about) -->
+  <script>
+    // Search bar redirect (same behaviour as about page)
+    document.getElementById('searchButton')?.addEventListener('click', function() {
+      const query = document.getElementById('searchInput')?.value;
+      if (query) {
+        alert('Search is available on the home page. Redirecting you there with your query…');
+        window.location.href = 'index.html?search=' + encodeURIComponent(query);
+      }
+    });
+    document.getElementById('searchInput')?.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        document.getElementById('searchButton')?.click();
+      }
+    });
+
+    // Filter buttons redirect to home with category filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const category = this.dataset.category;
+        if (category && category !== 'all') {
+          window.location.href = 'index.html?category=' + encodeURIComponent(category);
+        } else {
+          window.location.href = 'index.html';
+        }
+      });
+    });
+
+    // Small nicety: smooth anchor scroll for internal links (if someone links to #privacy, etc.)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

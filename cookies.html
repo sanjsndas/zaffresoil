@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies Policy · Zaffre Soil Almanac</title>
+  <meta name="description" content="Cookies policy for Zaffre Soil Almanac — what cookies we use, why, and how you can manage them.">
+  <link rel="canonical" href="https://zaffresoilalmanac.example/cookies.html">
+  <meta property="og:title" content="Cookies Policy · Zaffre Soil Almanac">
+  <meta property="og:description" content="How we use cookies and similar technologies on our gardening site.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zaffresoilalmanac.example/cookies.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES (consistent with main site) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #faf8f2;
+      --paper: #ffffff;
+      --ink: #1f2a1f;
+      --ink-soft: #2e3b2e;
+      --muted: #576b57;
+      --border: #d9d4c7;
+      --accent-zaffre: #1f3b4c;
+      --accent-leaf: #3a6b4a;
+      --accent-earth: #9b7b5c;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02);
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.8rem; margin: 2rem 0 1rem; }
+    h3 { font-size: 1.35rem; margin: 1.8rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+
+    a {
+      color: var(--accent-zaffre);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover { color: var(--accent-leaf); }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER (exact same as main) ---------- */
+    .blog-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .logo span {
+      color: var(--accent-zaffre);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--muted);
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--ink-soft);
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: var(--accent-leaf);
+      color: var(--ink);
+    }
+
+    /* ---------- COOKIES PAGE LAYOUT ---------- */
+    .cookies-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2.8rem 3rem;
+      box-shadow: var(--shadow-sm);
+      margin: 3rem 0 4rem;
+    }
+
+    .cookies-card h1 {
+      margin-bottom: 0.75rem;
+      font-size: 2.2rem;
+    }
+
+    .cookies-card .last-updated {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background: var(--cream);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      border: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .cookies-intro {
+      font-size: 1.1rem;
+      color: var(--ink-soft);
+      border-left: 4px solid var(--accent-earth);
+      padding-left: 1.5rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .cookies-card ul, .cookies-card ol {
+      margin: 1rem 0 1.5rem 2rem;
+    }
+
+    .cookies-card li {
+      margin-bottom: 0.6rem;
+    }
+
+    .cookies-card hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    .cookies-card .highlight-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .cookies-card .highlight-box h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .cookies-card .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-mini {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .contact-mini p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
+    }
+
+    .contact-mini .btn {
+      background: var(--accent-zaffre);
+      color: white;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .contact-mini .btn:hover {
+      background: var(--accent-leaf);
+      color: white;
+    }
+
+    /* ---------- FOOTER (consistent) ---------- */
+    .blog-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .footer-col a {
+      color: var(--ink-soft);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .cookies-card {
+        padding: 2rem 1.5rem;
+      }
+      h1 { font-size: 2rem; }
+      .cookies-card h1 { font-size: 1.9rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .cookies-card { padding: 1.8rem 1.2rem; }
+      .cookies-card ul, .cookies-card ol { margin-left: 1.2rem; }
+      .contact-mini { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (identical to main) -->
+  <header class="blog-header">
+    <div class="container header-inner">
+      <div class="logo">Zaffre <span>Soil</span> Almanac</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- COOKIES CONTENT CARD -->
+    <div class="cookies-card">
+      <h1>Cookies Policy</h1>
+      <div class="last-updated">Last updated: April 2025</div>
+
+      <p class="cookies-intro">
+        Zaffre Soil Almanac uses a minimal set of cookies to keep the site running smoothly and to understand 
+        how readers use our content. We don't track you across the internet, and we never sell your data.
+      </p>
+
+      <h2>1. What are cookies?</h2>
+      <p>
+        Cookies are tiny text files stored on your device when you visit a website. They help the site remember 
+        your actions and preferences (like language or font size) over time, so you don't have to re-enter 
+        them every time you browse. They also help us see which articles are most useful to our readers.
+      </p>
+
+      <h2>2. How we use cookies</h2>
+      <p>We use a very small number of cookies, grouped into two simple categories:</p>
+      <ul>
+        <li><strong>Essential cookies:</strong> These are necessary for the site to function. They let you navigate 
+          between pages, use our contact form, and access secure areas. Without these, the site simply won't work 
+          properly.</li>
+        <li><strong>Analytics cookies (privacy‑focused):</strong> We use a lightweight, anonymized analytics 
+          service to count visits and see which pages are popular. This data is aggregated and never linked to 
+          you personally. It helps us decide what to write about next.</li>
+      </ul>
+      <p>
+        We do <strong>not</strong> use advertising cookies, social media tracking pixels, or any third‑party 
+        cookies that follow you around the web.
+      </p>
+
+      <h2>3. Specific cookies we set</h2>
+      <p>Here's a transparent list of the cookies you may encounter on our site:</p>
+      <ul>
+        <li><strong>zaffre_session</strong> — Essential. Keeps your session active while you browse. Expires when 
+          you close your browser.</li>
+        <li><strong>zaffre_prefs</strong> — Essential. Stores small preferences like whether you've dismissed 
+          our cookie notice. Lasts 6 months.</li>
+        <li><strong>zaffre_analytics</strong> — Analytics. A first‑party cookie that records a random ID to 
+          distinguish unique visits. No personal data. Lasts 12 months.</li>
+      </ul>
+      <p>
+        Our analytics provider may also set a cookie, but it is configured to anonymize IP addresses and does 
+        not share data with any other service.
+      </p>
+
+      <h2>4. Third‑party cookies</h2>
+      <p>
+        We do not embed third‑party services that set their own cookies (like YouTube, Facebook, or Google 
+        Maps). If we ever link to an external site, that site will have its own cookie policy — please check 
+        it separately.
+      </p>
+
+      <h2>5. Your control over cookies</h2>
+      <p>
+        You can control and delete cookies as you wish. Most browsers allow you to:
+      </p>
+      <ul>
+        <li>See what cookies you have and delete them individually.</li>
+        <li>Block third‑party cookies.</li>
+        <li>Block cookies from specific sites.</li>
+        <li>Block all cookies from being set.</li>
+        <li>Delete all cookies when you close your browser.</li>
+      </ul>
+      <p>
+        Be aware that if you block or delete our essential cookies, some parts of the site (like the contact 
+        form) may not work correctly. You can find instructions for managing cookies in your browser's help 
+        section — here are links for <a href="#" rel="nofollow">Chrome</a>, <a href="#" rel="nofollow">Firefox</a>, 
+        <a href="#" rel="nofollow">Safari</a>, and <a href="#" rel="nofollow">Edge</a>.
+      </p>
+
+      <div class="highlight-box">
+        <h3>🌿 A note on "Do Not Track"</h3>
+        <p>
+          Some browsers offer a "Do Not Track" (DNT) setting. Because there is no common industry standard for 
+          how to respond, we treat all visitors the same: we only use the minimal, privacy‑respecting cookies 
+          described above. We do not track you across third‑party websites.
+        </p>
+      </div>
+
+      <h2>6. Changes to this policy</h2>
+      <p>
+        If we change our cookie usage in any meaningful way, we'll update this page and revise the "Last updated" 
+        date. We'll also notify newsletter subscribers if the change is significant.
+      </p>
+
+      <h2>7. More information</h2>
+      <p>
+        For more details about how we handle your personal information, please see our 
+        <a href="privacy.html">Privacy Policy</a>. If you have any questions about cookies or this policy, 
+        reach out to us at <a href="mailto:privacy@zaffresoilalmanac.example">privacy@zaffresoilalmanac.example</a>.
+      </p>
+
+      <hr>
+
+      <p style="font-size:0.95rem; color: var(--muted); margin-bottom:0;">
+        We believe in keeping things simple — no confusing jargon, no hidden trackers. Just a clean, 
+        respectful website for gardeners.
+      </p>
+
+      <!-- Mini contact prompt -->
+      <div class="contact-mini">
+        <p><strong>Questions about cookies?</strong> We're happy to explain.</p>
+        <a href="contact.html" class="btn">Contact the editors →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER (identical to main) -->
+  <footer class="blog-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Zaffre Soil Almanac</h5>
+          <p style="font-size:0.9rem; color: var(--muted);">Independent gardening journalism since 2021.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#">Soil</a></li>
+            <li><a href="#">Planting</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Small Spaces</a></li>
+            <li><a href="#">Seasonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>About</h5>
+          <ul>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookie policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@zaffresoilalmanac.example">hello@zaffresoilalmanac.example</a></li>
+            <li><a href="#">Submit a story</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Zaffre Soil Almanac. All rights reserved.</span>
+        <span>Made for gardeners, by gardeners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- No extra JavaScript needed for static cookies page -->
+</body>
+</html>
